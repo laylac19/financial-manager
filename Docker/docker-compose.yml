@@ -1,7 +1,7 @@
 version: '2'
 services:
-  gfp-postgresqll:
+  fms-postgresql:
     extends:
       file: postgresql.yml
-      service: gfp-postgresql
-    container_name: gfp-postgresql
+      service: fms-postgresql
+    container_name: fms-postgresql
