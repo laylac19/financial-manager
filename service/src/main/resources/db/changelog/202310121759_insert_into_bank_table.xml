@@ -5,23 +5,26 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
 
-
-    <changeSet id="1697134155228-1" author="layla">
+    <changeSet id="1697144385354-1" author="layla">
         <insert tableName="tb_bank">
-            <column name="id" valueSequenceNext="1"/>
+            <column name="id" valueNumeric="1"/>
             <column name="description" value="Caixa"/>
+            <column name="active" valueBoolean="true"/>
         </insert>
         <insert tableName="tb_bank">
-            <column name="id" valueSequenceNext="2"/>
+            <column name="id" valueNumeric="2"/>
             <column name="description" value="Inter"/>
+            <column name="active" valueBoolean="true"/>
         </insert>
         <insert tableName="tb_bank">
-            <column name="id" valueSequenceNext="3"/>
+            <column name="id" valueNumeric="3"/>
             <column name="description" value="Itaú"/>
+            <column name="active" valueBoolean="true"/>
         </insert>
         <insert tableName="tb_bank">
-            <column name="id" valueSequenceNext="4"/>
+            <column name="id" valueNumeric="4"/>
             <column name="description" value="Nubank"/>
+            <column name="active" valueBoolean="true"/>
         </insert>
     </changeSet>
 </databaseChangeLog>

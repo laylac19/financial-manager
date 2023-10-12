@@ -14,4 +14,6 @@
 	<include file="db/changelog/202310121521_create_application_table.xml"/>
 	<include file="db/changelog/202310121522_create_movement_application_table.xml"/>
 
+	<include file="db/changelog/202310121759_insert_into_bank_table.xml"/>
+
 </databaseChangeLog>
