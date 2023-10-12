@@ -1,10 +1,10 @@
-package com.financial.manager.financial.manager;
+package com.financial.manager.service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class FinancialManagerApplicationTests {
+class ServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+
+    <changeSet id="1697134155228-1" author="layla">
+        <insert tableName="tb_bank">
+            <column name="id" valueSequenceNext="1"/>
+            <column name="description" value="Caixa"/>
+        </insert>
+        <insert tableName="tb_bank">
+            <column name="id" valueSequenceNext="2"/>
+            <column name="description" value="Inter"/>
+        </insert>
+        <insert tableName="tb_bank">
+            <column name="id" valueSequenceNext="3"/>
+            <column name="description" value="Itaú"/>
+        </insert>
+        <insert tableName="tb_bank">
+            <column name="id" valueSequenceNext="4"/>
+            <column name="description" value="Nubank"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

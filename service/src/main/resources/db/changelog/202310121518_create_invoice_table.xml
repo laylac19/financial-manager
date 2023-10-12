@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="1697134753306-1" author="layla">
+        <createSequence incrementBy="1" sequenceName="sequence_invoice" startValue="1"/>
+        <createTable tableName="tb_card_invoice">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_tb_card_invoice"/>
+            </column>
+            <column name="month" type="SMALLINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="value" type="DECIMAL(19, 2)"/>
+            <column name="credit_card enum" type="SMALLINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="active" type="BOOLEAN"/>
+        </createTable>
+        <addUniqueConstraint columnNames="credit_card enum" constraintName="uc_tb_card_invoice_credit_card_enum"
+                             tableName="tb_card_invoice"/>
+    </changeSet>
+</databaseChangeLog>

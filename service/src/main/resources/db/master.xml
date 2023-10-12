@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+		xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+	<include file="db/changelog/202310121137_create_bank_table.xml"/>
+	<include file="db/changelog/202310121207_create_account_table.xml"/>
+	<include file="db/changelog/202310121347_create_credit_card_table.xml"/>
+	<include file="db/changelog/202310121516_create_movement_table.xml"/>
+	<include file="db/changelog/202310121518_create_invoice_table.xml"/>
+	<include file="db/changelog/202310121520_create_fixed_expenses_table.xml"/>
+	<include file="db/changelog/202310121521_create_application_table.xml"/>
+	<include file="db/changelog/202310121522_create_movement_application_table.xml"/>
+
+</databaseChangeLog>

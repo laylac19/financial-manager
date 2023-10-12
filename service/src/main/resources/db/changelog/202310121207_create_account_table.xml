@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+
+    <changeSet id="1697134321085-1" author="layla">
+        <createSequence incrementBy="1" sequenceName="sequence_account" startValue="1"/>
+        <createTable tableName="tb_account">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_tb_account"/>
+            </column>
+            <column name="description" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="type_account" type="SMALLINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="balance" type="DOUBLE"/>
+            <column name="bank_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="bank_id" baseTableName="tb_account"
+                                 constraintName="FK_TB_ACCOUNT_ON_BANK" referencedColumnNames="id"
+                                 referencedTableName="tb_bank"/>
+    </changeSet>
+</databaseChangeLog>

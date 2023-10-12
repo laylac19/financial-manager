@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="1697134646070-1" author="layla">
+        <createSequence incrementBy="1" sequenceName="sequence_account" startValue="1"/>
+        <createTable tableName="tb_money_movement">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_tb_money_movement"/>
+            </column>
+            <column name="description" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="value" type="DECIMAL">
+                <constraints nullable="false"/>
+            </column>
+            <column name="date_movement" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="type_movement" type="SMALLINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="account_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="account_id" baseTableName="tb_money_movement"
+                                 constraintName="FK_TB_MONEY_MOVEMENT_ON_ACCOUNT" referencedColumnNames="id"
+                                 referencedTableName="tb_account"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="1697134825269-1" author="layla">
+        <createSequence incrementBy="1" sequenceName="sequence_fixed_expenses" startValue="1"/>
+        <createTable tableName="tb_fixed_expenses">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_tb_fixed_expenses"/>
+            </column>
+            <column name="pay_day" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="expense_status" type="SMALLINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="tb_fixed_expenses"
+                                 constraintName="FK_TB_FIXED_EXPENSES_ON_ID" referencedColumnNames="id"
+                                 referencedTableName="tb_money_movement"/>
+    </changeSet>
+</databaseChangeLog>
