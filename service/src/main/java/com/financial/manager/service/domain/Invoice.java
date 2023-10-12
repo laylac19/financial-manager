@@ -33,7 +33,7 @@ public class Invoice {
     @Column(name = "CREDIT_CARD ENUM", nullable = false, unique = true)
     private CreditCardEnum creditCardEnum;
 
-    @Column(name = "ACTIVE")
+    @Column(name = "ACTIVE", nullable = false)
     private Boolean active;
 
     public Invoice(Long id, String month, BigDecimal value, CreditCardEnum creditCard, Boolean active) {

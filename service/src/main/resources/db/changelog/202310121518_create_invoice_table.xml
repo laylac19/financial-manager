@@ -18,7 +18,9 @@
             <column name="credit_card enum" type="SMALLINT">
                 <constraints nullable="false"/>
             </column>
-            <column name="active" type="BOOLEAN"/>
+            <column name="active" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
         </createTable>
         <addUniqueConstraint columnNames="credit_card enum" constraintName="uc_tb_card_invoice_credit_card_enum"
                              tableName="tb_card_invoice"/>

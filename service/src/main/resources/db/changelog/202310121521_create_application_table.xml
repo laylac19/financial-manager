@@ -20,7 +20,14 @@
             <column name="value" type="DECIMAL">
                 <constraints nullable="false"/>
             </column>
+            <column name="active" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
         </createTable>
-        <addForeignKeyConstraint baseColumnNames="account_id" baseTableName="tb_application" constraintName="FK_TB_APPLICATION_ON_ACCOUNT" referencedColumnNames="id" referencedTableName="tb_account"/>
+        <addForeignKeyConstraint baseColumnNames="account_id" baseTableName="tb_application"
+                                 constraintName="FK_TB_APPLICATION_ON_ACCOUNT" referencedColumnNames="id"
+                                 referencedTableName="tb_account"/>
     </changeSet>
+
+
 </databaseChangeLog>

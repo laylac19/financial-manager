@@ -1,6 +1,6 @@
 package com.financial.manager.service.domain.enun;
 
-public enum TypeMovement {
+public enum TypeMovementEnum {
     SAIDA(1, "Saída Conta"),
     ENTRADA(2, "Entrada Conta"),
     CREDITO(3, "Compra Cartão"),
@@ -11,7 +11,7 @@ public enum TypeMovement {
     private final Integer type;
     private final String description;
 
-    TypeMovement(Integer type, String description) {
+    TypeMovementEnum(Integer type, String description) {
         this.type = type;
         this.description = description;
     }

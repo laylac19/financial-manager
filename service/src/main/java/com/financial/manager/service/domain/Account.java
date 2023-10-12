@@ -1,6 +1,6 @@
 package com.financial.manager.service.domain;
 
-import com.financial.manager.service.domain.enun.TypeAccount;
+import com.financial.manager.service.domain.enun.TypeAccountEnum;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -32,7 +32,7 @@ public class Account {
 
     @Enumerated
     @Column(name = "TYPE_ACCOUNT", nullable = false)
-    private TypeAccount typeAccount;
+    private TypeAccountEnum typeAccount;
 
     @Column(name = "BALANCE")
     private Double balance;
@@ -40,5 +40,8 @@ public class Account {
     @ManyToOne(cascade = CascadeType.MERGE, optional = false)
     @JoinColumn(name = "BANK_ID", nullable = false)
     private Bank bank;
+
+    @Column(name = "ACTIVE", nullable = false)
+    private Boolean active;
 
 }

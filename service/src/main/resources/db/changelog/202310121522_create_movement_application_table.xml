@@ -6,6 +6,7 @@
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
 
     <changeSet id="1697134983502-1" author="layla">
+
         <createTable tableName="tb_movement_application">
             <column name="id_application" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="pk_tb_movement_application"/>
@@ -14,5 +15,11 @@
                 <constraints nullable="false" primaryKey="true" primaryKeyName="pk_tb_movement_application"/>
             </column>
         </createTable>
+        <addForeignKeyConstraint baseColumnNames="id_application" baseTableName="tb_movement_application"
+                                 constraintName="FK_TB_MOVEMENT_APPLICATION_ON_ID_APPLICATION"
+                                 referencedColumnNames="id" referencedTableName="tb_application"/>
+        <addForeignKeyConstraint baseColumnNames="id_money_movement" baseTableName="tb_movement_application"
+                                 constraintName="FK_TB_MOVEMENT_APPLICATION_ON_ID_MONEY_MOVEMENT"
+                                 referencedColumnNames="id" referencedTableName="tb_money_movement"/>
     </changeSet>
 </databaseChangeLog>

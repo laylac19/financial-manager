@@ -1,6 +1,6 @@
 package com.financial.manager.service.domain;
 
-import com.financial.manager.service.domain.enun.ExpenseStatus;
+import com.financial.manager.service.domain.enun.ExpenseStatusEnum;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Enumerated;
@@ -21,6 +21,9 @@ public class FixedExpenses extends MoneyMovement {
 
     @Enumerated
     @Column(name = "EXPENSE_STATUS", nullable = false)
-    private ExpenseStatus expenseStatus;
+    private ExpenseStatusEnum expenseStatus;
+
+    @Column(name = "ACTIVE", nullable = false)
+    private Boolean active;
 
 }

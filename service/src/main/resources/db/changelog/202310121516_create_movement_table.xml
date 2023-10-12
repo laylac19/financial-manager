@@ -26,6 +26,9 @@
             <column name="account_id" type="BIGINT">
                 <constraints nullable="false"/>
             </column>
+            <column name="active" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
         </createTable>
         <addForeignKeyConstraint baseColumnNames="account_id" baseTableName="tb_money_movement"
                                  constraintName="FK_TB_MONEY_MOVEMENT_ON_ACCOUNT" referencedColumnNames="id"

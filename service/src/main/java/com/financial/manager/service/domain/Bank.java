@@ -24,4 +24,7 @@ public class Bank {
 
     @Column(name = "DESCRIPTION", nullable = false)
     private String description;
+
+    @Column(name = "ACTIVE", nullable = false)
+    private Boolean active;
 }

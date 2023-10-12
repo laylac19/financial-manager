@@ -1,6 +1,6 @@
 package com.financial.manager.service.domain;
 
-import com.financial.manager.service.domain.enun.TypeMovement;
+import com.financial.manager.service.domain.enun.TypeMovementEnum;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -33,10 +33,13 @@ public class MoneyMovement {
 
     @Enumerated
     @Column(name = "TYPE_MOVEMENT", nullable = false)
-    private TypeMovement typeMovement;
+    private TypeMovementEnum typeMovement;
 
     @ManyToOne(cascade = CascadeType.MERGE, optional = false)
     @JoinColumn(name = "ACCOUNT_ID", nullable = false)
     private Account account;
+
+    @Column(name = "ACTIVE", nullable = false)
+    private Boolean active;
 
 }

@@ -23,4 +23,12 @@ public class MovementApplication {
     @Id
     @Column(name = "ID_MONEY_MOVEMENT")
     private Long movementId;
+
+    @ManyToOne(cascade = CascadeType.MERGE, optional = false)
+    @JoinColumn(name = "ID_APPLICATION", referencedColumnName = "id", nullable = false, unique = true)
+    private Application application;
+
+    @ManyToOne(cascade = CascadeType.MERGE, optional = false)
+    @JoinColumn(name = "ID_MONEY_MOVEMENT", nullable = false, unique = true)
+    private MoneyMovement moneyMovement;
 }

@@ -28,4 +28,6 @@ public class Application {
     @Column(name = "VALUE", nullable = false)
     private BigDecimal value;
 
+    @Column(name = "ACTIVE", nullable = false)
+    private Boolean active;
 }

@@ -44,4 +44,7 @@ public class CreditCard {
     @JoinColumn(name = "ACCOUNT_ID", nullable = false)
     private Account account;
 
+    @Column(name = "ACTIVE", nullable = false)
+    private Boolean active;
+
 }

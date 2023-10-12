@@ -1,14 +1,13 @@
 package com.financial.manager.service.domain.enun;
 
-public enum ExpenseStatus {
-    EM_ABERTO(1, "Em Aberto"),
-    RENDENDO(2, "Rendendo"),
-    PAGO(3, "Pago");
+public enum TypeAccountEnum {
+    CORRENTE(1, "Conta Corrente"),
+    POUPANCA(2, "Conta Poupança");
 
     private final Integer type;
     private final String description;
 
-    ExpenseStatus(Integer type, String description) {
+    TypeAccountEnum(Integer type, String description) {
         this.type = type;
         this.description = description;
     }
